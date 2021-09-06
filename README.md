@@ -1,6 +1,8 @@
 # Alien-Python
 
-Alien-Python est une bibliothèque permettant de créer des exercices corrigés de programmation. 20 exercices sont fournis.
+Alien-Python est une bibliothèque permettant de créer des exercices corrigés de programmation qui peuvent être utilisés pour des activités débranchées.
+
+20 exercices de bases sont fournis (se limitant à l'utilisation de boucle de répétition non imbriquées).
 
 La grille ci-dessous est données aux élèves :
 
