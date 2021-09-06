@@ -24,6 +24,8 @@ La bibliothèque permet de générer automatiquement une correction de l'exercic
 
   - Le dossier `sujets` contient les programmes au format image
 
+    - La ligne d'importation ainsi que la ligne de génération d'image sont automatiquement retirées lors de la génération de l'image
+
   - Le dossier `corrections` contient la correction des exercices
     
     - Le fichier `0.png` contient la grille de base avec l'alien 
@@ -35,6 +37,10 @@ La bibliothèque permet de générer automatiquement une correction de l'exercic
 - Le dossier `ressources` contient les diverses ressources nécessaires au projet (images, polices, etc.)
 
 - Le dossier `autres` contient divers fichiers en vrac
+
+## Création d'exercices
+
+Pour créer un exercice, il suffit de s'insiperer d'un des exercices de base fournis. Exécuter le fichier permettra de générer la grille de correction. Exécuter le programme dans le dossier tool permettra de générer le programme au format image.
 
 ## License
 
