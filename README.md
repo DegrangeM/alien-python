@@ -40,7 +40,11 @@ La bibliothèque permet de générer automatiquement une correction de l'exercic
 
 ## Création d'exercices
 
-Pour créer un exercice, il suffit de s'insiperer d'un des exercices de base fournis. Exécuter le fichier permettra de générer la grille de correction. Exécuter le programme dans le dossier tool permettra de générer le programme au format image.
+Pour créer un exercice, il suffit de s'insiperer d'un des exercices de base fournis.
+
+Exécuter le fichier permettra de générer la grille de correction.
+
+Exécuter le programme dans le dossier tool permettra de générer le programme au format image.
 
 ## License
 
