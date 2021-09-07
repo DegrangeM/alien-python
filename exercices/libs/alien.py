@@ -8,6 +8,7 @@ class Alien :
         self.y = y
         self.i = 1;
         self.l = False
+        self.step = False
         self.font = ImageFont.truetype("../ressources/font/LiberationMono-Bold.ttf", 10)
         self.grille = Image.open("../ressources/img/grille.png")
         self.alien = Image.open("../ressources/img/alien.png")
@@ -29,6 +30,7 @@ class Alien :
         self.x = x
         self.y = y
         self.afficher()
+        self.step and self.show()
     
     def haut(self, n=1) :
         self.teleporter(self.x,self.y-n)
@@ -48,6 +50,7 @@ class Alien :
     def localiser(self) :
         self.l = True
         self.afficher()
+        self.step and self.show()
         
     def show(self) :
         self.output.show()
@@ -63,6 +66,8 @@ class Alien :
         
         
 alien = Alien(8,8)
+
+
 
 for f in [f for f in dir(Alien) if not f.startswith('_')] :
     globals()[f] = getattr(alien, f)
