@@ -1,7 +1,10 @@
 from libs.alien import *
 
-for loop in range(5) :
-    gauche()
-    haut()
+a = 1
+bas(7)
+droite()
+for loop in range(3) :
+    a = a + 1
+    haut(a)
 
 ss()
