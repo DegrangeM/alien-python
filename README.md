@@ -2,7 +2,7 @@
 
 Alien-Python est une bibliothèque permettant de créer des exercices corrigés de programmation où les élèves doivent deviner la case d'arrivée d'un alien se déplaçant suivant un programme Python. Ces exercices peuvent être utilisés pour des activités débranchées.
 
-20 exercices de bases sont fournis (se limitant à l'utilisation de boucle de répétition non imbriquées).
+20 exercices de bases sont fournis (se limitant à l'utilisation de boucle de répétition non imbriquées). Ils sont trouvables dans les dossiers `exercices/sujets` et `exercices/corrections`.
 
 La grille ci-dessous est données aux élèves :
 
