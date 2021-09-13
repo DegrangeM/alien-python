@@ -41,10 +41,10 @@ class Alien :
     def bas(self, n=1) :
         self.teleporter(self.x,self.y+n)
         
-    def x(self) :
+    def colonne(self) :
         return self.x
     
-    def y(self) :
+    def ligne(self) :
         return self.y
         
     def localiser(self) :
