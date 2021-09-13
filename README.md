@@ -8,7 +8,7 @@ Alien-Python est une bibliothèque permettant de créer des exercices corrigés 
 
 - Les exercices 9 à 20 portent sur les boucles de répétition.
 
-- Les exercices 21 à 30 portent sur les conditions
+- Les exercices 21 à 35 portent sur les conditions
 
 La grille ci-dessous est données aux élèves :
 
