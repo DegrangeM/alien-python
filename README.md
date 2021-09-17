@@ -54,6 +54,14 @@ Exécuter le fichier permettra de générer la grille de correction.
 
 Exécuter le programme dans le dossier tool permettra de générer le programme au format image.
 
+## Exemples d'utilisation
+
+- En cours pour introduire petit à petit les notions, en particulier quand les élèves n'ont pas encore accès à un ordinateur
+
+- Pour générer des questions d'évaluations, et obtenir une correction qui pourra être envoyé aux élèves
+
+- Utilisé avec des outils comme wooclap ou moodle
+
 ## License
 
 Alien-Python est sous license MIT.
