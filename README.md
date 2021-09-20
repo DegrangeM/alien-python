@@ -1,14 +1,14 @@
 # Alien-Python
 
-Alien-Python est une bibliothèque permettant de créer des exercices corrigés de programmation où les élèves doivent deviner la case d'arrivée d'un alien se déplaçant suivant un programme Python. Ces exercices peuvent être utilisés pour des activités débranchées.
+Alien-Python est à la fois une bibliothèque permettant de créer des exercices corrigés de programmation où les élèves doivent deviner la case d'arrivée d'un alien se déplaçant suivant un programme Python et à la fois une collection d'exercices basés sur cette bibliothèque. Ces exercices peuvent être utilisés pour des activités débranchées.
 
-30 exercices de bases sont fournis (se limitant à l'utilisation de boucle de répétition non imbriquées). Ils sont disponibles dans les dossiers `exercices/sujets` et `exercices/corrections`.
+30 exercices de bases sont fournis. Ils sont disponibles dans les dossiers `exercices/sujets` et `exercices/corrections`.
 
 - Les exercices 1 à 8 portent sur les déplacements et l'utilisation des variables
 
 - Les exercices 9 à 20 portent sur les boucles de répétition.
 
-- Les exercices 21 à 30 portent sur les conditions
+- Les exercices 21 à 35 portent sur les conditions
 
 La grille ci-dessous est données aux élèves :
 
@@ -53,6 +53,14 @@ Pour créer un exercice, il suffit de s'insiperer d'un des exercices de base fou
 Exécuter le fichier permettra de générer la grille de correction.
 
 Exécuter le programme dans le dossier tool permettra de générer le programme au format image.
+
+## Exemples d'utilisation
+
+- En cours pour introduire petit à petit les notions, en particulier quand les élèves n'ont pas encore accès à un ordinateur
+
+- Pour générer des questions d'évaluations, et obtenir une correction qui pourra être envoyé aux élèves
+
+- Utilisé avec des outils comme wooclap ou moodle
 
 ## License
 
