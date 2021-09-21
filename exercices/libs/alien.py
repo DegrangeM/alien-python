@@ -53,11 +53,13 @@ class Alien :
         self.step and self.show()
         
     def show(self) :
+        if __file__.split('\\')[0] == 'generer_moodle.py' : return
         self.output.show()
         
     def save(self, name=None) :
+        if __file__.split('\\')[0] == 'generer_moodle.py' : return
         if name == None :
-            name = sys.argv[0].split('.')[0].split('/')[-1]
+            name = sys.argv[0].split('.')[0].replace('\\','/').split('/')[-1]
         self.output.save("corrections/" + str(name) + ".png")
         
     def ss(self, name=None) :
