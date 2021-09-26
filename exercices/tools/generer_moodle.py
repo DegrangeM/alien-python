@@ -1,6 +1,7 @@
 import importlib.util
 from importlib import reload
 import os
+from xml.dom import minidom
 
 import sys
 from pathlib import Path
@@ -16,9 +17,22 @@ def module_from_file(module_name, file_path):
     spec.loader.exec_module(module)
     return module
 
+xml = minidom.Document()
+quiz = xml.createElement('quiz')
+xml.appendChild(quiz)
+
+
 
 for f in os.listdir("./"):
     if os.path.isfile(f):
+        question = xml.createElement('question')
+        quiz.appendChild(question)
+        question.setAttribute('type', 'shortanswer')
+        name = xml.createElement('name')
+        question.appendChild(name)
+        text = xml.createElement('text')
+        name.appendChild(text)
+        text.appendChild(xml.createTextNode(f.split('.')[0]));
         # il faut invalider le cache du module afin que la
         # ligne alien = Alien(8,8) s'exécute à nouveau
         if 'libs.alien' in sys.modules :
