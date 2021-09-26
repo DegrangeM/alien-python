@@ -32,7 +32,7 @@ text = xml.createElement('text')
 category.appendChild(text)
 text.appendChild(xml.createTextNode('<infos><name>Alien</name><answernumbering>123</answernumbering><niveau></niveau><matiere></matiere></infos>'));
 
-for f in os.listdir("./"):
+for f in sorted(os.listdir("./"), key=lambda x: (int(x[0:-3]) if x[0:-3].isdigit() else float('inf'), x)) :
     if os.path.isfile(f) :
         
         # il faut invalider le cache du module afin que la

@@ -23,8 +23,8 @@ xml.appendChild(quiz)
 
 
 
-for f in os.listdir("./"):
-    if os.path.isfile(f):
+for f in sorted(os.listdir("./"), key=lambda x: (int(x[0:-3]) if x[0:-3].isdigit() else float('inf'), x)) :
+    if os.path.isfile(f) :
         
         # il faut invalider le cache du module afin que la
         # ligne alien = Alien(8,8) s'exécute à nouveau
