@@ -40,7 +40,15 @@ La bibliothèque permet de générer automatiquement une correction de l'exercic
 
   - Le dossier `libs` contient la librairie de base permettant de générer les corrections
 
-  - Le dossier `tools` contient un fichier à exécuter pour générer les énoncés des programmes au format image
+  - Le dossier `tools` contient des fichier utiles à exécuter
+     
+    - Le fichier `generer_sujet.py` permet de générer les énoncés des programmes au format image
+
+    - Le fichier `generer_moodle.py` permet de générer un fichier `moodle.xml` à importer dans un quizz moodle
+    
+    - Le fichier `generer_pronote.py` permet de générer un fichier `pronote.xml` à importer dans les quizz pronote
+
+    *Note : Il faut d'abord générer les sujets et les corrigés avant de générer les fichiers moodle et pronote. Les fichiers liés aux exercices fournis de base sont déjà générés.*
 
 - Le dossier `ressources` contient les diverses ressources nécessaires au projet (images, polices, etc.)
 
@@ -60,7 +68,9 @@ Exécuter le programme dans le dossier tool permettra de générer le programme 
 
 - Pour générer des questions d'évaluations, et obtenir une correction qui pourra être envoyé aux élèves
 
-- Utilisé avec des outils comme wooclap ou moodle
+- Utilisé avec des outils comme wooclap pour une présentation interactive
+
+- Utilisé avec Moodle ou Pronote pour des QCM autocorrigé (voir dossier tools)
 
 ## License
 
