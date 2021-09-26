@@ -33,7 +33,7 @@ for f in os.listdir("./"):
         r = module_from_file(f, f)
         lettres = ["", "A","B","C","D","E","F","G","H","I","J","K","L","M","N","O"]
         with open('./sujets/'+f.split('.')[0]+'.png', "rb") as fichier_sujet:
-            sujet = base64.b64encode(fichier_sujet.read())
+            sujet = base64.b64encode(fichier_sujet.read()).decode()
         solution = lettres[r.alien.y] + str(r.alien.x)
         
         #quiz/question
