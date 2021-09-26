@@ -2,7 +2,7 @@ import importlib.util
 from importlib import reload
 import os
 from xml.dom import minidom
-
+import base64
 import sys
 from pathlib import Path
 
@@ -25,20 +25,50 @@ xml.appendChild(quiz)
 
 for f in os.listdir("./"):
     if os.path.isfile(f):
-        question = xml.createElement('question')
-        quiz.appendChild(question)
-        question.setAttribute('type', 'shortanswer')
-        name = xml.createElement('name')
-        question.appendChild(name)
-        text = xml.createElement('text')
-        name.appendChild(text)
-        text.appendChild(xml.createTextNode(f.split('.')[0]));
+        
         # il faut invalider le cache du module afin que la
         # ligne alien = Alien(8,8) s'exécute à nouveau
         if 'libs.alien' in sys.modules :
             del sys.modules['libs.alien']
         r = module_from_file(f, f)
-        print(f)
         lettres = ["", "A","B","C","D","E","F","G","H","I","J","K","L","M","N","O"]
-        print(lettres[r.alien.y] + str(r.alien.x))
+        solution = lettres[r.alien.y] + str(r.alien.x)
+        
+        #quiz/question
+        question = xml.createElement('question')
+        quiz.appendChild(question)
+        question.setAttribute('type', 'shortanswer')
+        #quiz/question/name
+        name = xml.createElement('name')
+        question.appendChild(name)
+        text = xml.createElement('text')
+        name.appendChild(text)
+        text.appendChild(xml.createTextNode(f.split('.')[0]));
+        #quiz/question/questiontext
+        questiontext = document.createElement('questiontext')
+        question.appendChild(questiontext)
+        questiontext.setAttribute('format', 'html')
+        text = xml.createElement('text')
+        questiontext.appendChild(text)
+        text.appendChild(xml.createTextNode('<img src="@@PLUGINFILE@@/' + f.split('.')[0] + '.png" alt="" role="presentation">'));
+        file = xml.createElement('file')
+        questiontext.appendChild(file)
+        file.setAttribute('name', f.split('.')[0] + '.png')
+        file.setAttribute('path', '/')
+        fiile.setAttribute('encoding', 'base64')
+        file.appendChild(xml.createTextNode('XXX'));
+        #quiz/question/defaultgrade
+        defaultgrade = xml.createElement('defaultgrade')
+        question.appendChild(defaultgrade)
+        defaultgrade.appendChild(xml.createTextNode('1'));
+        #quiz/question/name
+        answer = xml.createElement('answer')
+        question.appendChild(answer)
+        answer.setAttribute('fraction', '100')
+        answer.setAttribute('format', 'moodle_auto_format')
+        text = xml.createElement('text')
+        answer.appendChild(text)
+        text.appendChild(xml.createTextNode(solution));
+
+        
         
