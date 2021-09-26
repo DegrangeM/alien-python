@@ -32,6 +32,8 @@ for f in os.listdir("./"):
             del sys.modules['libs.alien']
         r = module_from_file(f, f)
         lettres = ["", "A","B","C","D","E","F","G","H","I","J","K","L","M","N","O"]
+        with open('./sujets/'+f.split('.')[0]+'.png', "rb") as fichier_sujet:
+            sujet = base64.b64encode(fichier_sujet.read())
         solution = lettres[r.alien.y] + str(r.alien.x)
         
         #quiz/question
@@ -45,7 +47,7 @@ for f in os.listdir("./"):
         name.appendChild(text)
         text.appendChild(xml.createTextNode(f.split('.')[0]));
         #quiz/question/questiontext
-        questiontext = document.createElement('questiontext')
+        questiontext = xml.createElement('questiontext')
         question.appendChild(questiontext)
         questiontext.setAttribute('format', 'html')
         text = xml.createElement('text')
@@ -55,8 +57,8 @@ for f in os.listdir("./"):
         questiontext.appendChild(file)
         file.setAttribute('name', f.split('.')[0] + '.png')
         file.setAttribute('path', '/')
-        fiile.setAttribute('encoding', 'base64')
-        file.appendChild(xml.createTextNode('XXX'));
+        file.setAttribute('encoding', 'base64')
+        file.appendChild(xml.createTextNode(str(sujet)));
         #quiz/question/defaultgrade
         defaultgrade = xml.createElement('defaultgrade')
         question.appendChild(defaultgrade)
@@ -70,5 +72,6 @@ for f in os.listdir("./"):
         answer.appendChild(text)
         text.appendChild(xml.createTextNode(solution));
 
-        
+with open("./tools/moodle.xml", "w") as f:
+    f.write(xml.toprettyxml()) 
         
