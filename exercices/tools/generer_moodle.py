@@ -32,8 +32,10 @@ for f in os.listdir("./"):
             del sys.modules['libs.alien']
         r = module_from_file(f, f)
         lettres = ["", "A","B","C","D","E","F","G","H","I","J","K","L","M","N","O"]
-        with open('./sujets/'+f.split('.')[0]+'.png', "rb") as fichier_sujet:
-            sujet = base64.b64encode(fichier_sujet.read()).decode()
+        with open('./sujets/'+f.split('.')[0]+'.png', "rb") as image:
+            sujet = base64.b64encode(image.read()).decode()
+        with open('./corrections/'+f.split('.')[0]+'.png', "rb") as image:
+            correction = base64.b64encode(image.read()).decode()
         solution = lettres[r.alien.y] + str(r.alien.x)
         
         #quiz/question
@@ -58,11 +60,28 @@ for f in os.listdir("./"):
         file.setAttribute('name', f.split('.')[0] + '.png')
         file.setAttribute('path', '/')
         file.setAttribute('encoding', 'base64')
-        file.appendChild(xml.createTextNode(str(sujet)));
+        file.appendChild(xml.createTextNode(sujet));
+        #quiz/question/generalfeedback
+        generalfeedback = xml.createElement('generalfeedback')
+        question.appendChild(generalfeedback)
+        generalfeedback.setAttribute('format', 'html')
+        text = xml.createElement('text')
+        generalfeedback.appendChild(text)
+        text.appendChild(xml.createTextNode('<img src="@@PLUGINFILE@@/' + f.split('.')[0] + '.png" alt="" role="presentation">'));
+        file = xml.createElement('file')
+        generalfeedback.appendChild(file)
+        file.setAttribute('name', f.split('.')[0] + '.png')
+        file.setAttribute('path', '/')
+        file.setAttribute('encoding', 'base64')
+        file.appendChild(xml.createTextNode(correction));
         #quiz/question/defaultgrade
         defaultgrade = xml.createElement('defaultgrade')
         question.appendChild(defaultgrade)
         defaultgrade.appendChild(xml.createTextNode('1'));
+        #quiz/question/usecase
+        usecase = xml.createElement('usecase')
+        question.appendChild(usecase)
+        usecase.appendChild(xml.createTextNode('0'));
         #quiz/question/name
         answer = xml.createElement('answer')
         question.appendChild(answer)
