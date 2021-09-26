@@ -54,7 +54,7 @@ for f in os.listdir("./"):
         questiontext.setAttribute('format', 'html')
         text = xml.createElement('text')
         questiontext.appendChild(text)
-        text.appendChild(xml.createTextNode('<img src="@@PLUGINFILE@@/' + f.split('.')[0] + '.png" alt="" role="presentation">'));
+        text.appendChild(xml.createTextNode('<p>Après avoir exécuté le programme ci-dessous, sur quelle case se retrouvera l\'alien ?</p><img src="@@PLUGINFILE@@/' + f.split('.')[0] + '.png" alt="" role="presentation">'));
         file = xml.createElement('file')
         questiontext.appendChild(file)
         file.setAttribute('name', f.split('.')[0] + '.png')
@@ -91,6 +91,6 @@ for f in os.listdir("./"):
         answer.appendChild(text)
         text.appendChild(xml.createTextNode(solution));
 
-with open("./tools/moodle.xml", "w") as f:
+with open("./tools/moodle.xml", "w", encoding='utf8') as f:
     f.write(xml.toprettyxml()) 
         
