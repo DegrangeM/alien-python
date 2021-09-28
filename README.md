@@ -1,3 +1,5 @@
+<a href="https://github.com/DegrangeM/alien-python/archive/refs/heads/master.zip"><img src="https://shields.io/badge/%20%20T%C3%A9l%C3%A9charger-.zip-green?logo=gitlfs&&logoColor=white&style=flat"></a>
+
 # Alien-Python
 
 Alien-Python est à la fois une bibliothèque permettant de créer des exercices corrigés de programmation où les élèves doivent deviner la case d'arrivée d'un alien se déplaçant suivant un programme Python et à la fois une collection d'exercices basés sur cette bibliothèque. Ces exercices peuvent être utilisés pour des activités débranchées.
