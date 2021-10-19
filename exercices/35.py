@@ -10,4 +10,3 @@ for loop in range(8) :
     haut()
 
 ss()
-
