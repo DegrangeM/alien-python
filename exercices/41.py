@@ -1,7 +1,5 @@
 from libs.alien import *
 
-a = 0
-
 haut(6)
 droite(6)
 while colonne() > 6 :
