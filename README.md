@@ -14,6 +14,8 @@ Alien-Python est à la fois une bibliothèque permettant de créer des exercices
 
 - Les exercices 36 à 47 portent sur les boucles while
 
+- A venir : des exercices sur les boucles de répétition généralisée (utilisation de la variable compteur)
+
 La grille ci-dessous est données aux élèves :
 
 <img src="https://user-images.githubusercontent.com/53106394/132256944-e0aa843a-f729-4e3f-8522-48c9dc8735f2.png" width="400" />
