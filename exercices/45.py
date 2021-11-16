@@ -12,5 +12,5 @@ while a < 80 :
         bas(2)
     droite()
     print(a)
-    
+
 ss()
