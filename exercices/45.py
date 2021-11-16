@@ -1,20 +1,16 @@
 from libs.alien import *
 
-x = 8
-y = 8
-
-y = y + 6
-bas(6)
-x = x - 7
+a = 1
 gauche(7)
 
-while x < 12 :
-    while y < 11 :
-        x = x + 1
-        droite()
-        y = y + 3
-        bas(3)
-    y = y - 10
-    haut(10)
-
+while a < 80 :
+    if a < 50 :
+        a = a * 2
+        haut()
+    else :
+        a = a + 5
+        bas(2)
+    droite()
+    print(a)
+    
 ss()
