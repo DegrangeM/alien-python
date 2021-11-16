@@ -12,6 +12,8 @@ Alien-Python est à la fois une bibliothèque permettant de créer des exercices
 
 - Les exercices 21 à 35 portent sur les conditions
 
+- Les exercices 36 à 47 portent sur les boucles while
+
 La grille ci-dessous est données aux élèves :
 
 <img src="https://user-images.githubusercontent.com/53106394/132256944-e0aa843a-f729-4e3f-8522-48c9dc8735f2.png" width="400" />
@@ -73,6 +75,8 @@ Exécuter le programme dans le dossier tool permettra de générer le programme 
 - Utilisé avec des outils comme wooclap pour une présentation interactive
 
 - Utilisé avec Moodle ou Pronote pour des QCM autocorrigé (voir dossier tools)
+
+- Lors de séance où les élèves créés eux même leurs exercices pour défier leurs amis
 
 ## License
 
