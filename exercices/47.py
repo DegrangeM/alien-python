@@ -1,20 +1,15 @@
 from libs.alien import *
 
-x = 8
-y = 8
-
-y = y + 6
-bas(6)
-x = x - 7
-gauche(7)
-
-while x < 12 :
-    while y < 11 :
-        x = x + 1
-        droite()
-        y = y + 3
-        bas(3)
-    y = y - 10
-    haut(10)
+for loop in range(3) :
+    gauche(2)
+    
+while colonne() > 5 :
+    a = 47
+    b = 24
+    c = a * b
+    d = 2 * b * b
+    e = d - c
+    e = e - 22
+    gauche(e)
 
 ss()
