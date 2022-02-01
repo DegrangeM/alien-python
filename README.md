@@ -10,7 +10,7 @@ Alien-Python est à la fois une bibliothèque permettant de créer des exercices
 
 - Les exercices 9 à 20 portent sur les boucles de répétition.
 
-- Les exercices A à H sont des exercices inversés portent sur les déplacements et les boucles de répétition
+- Les exercices A à H sont des exercices inversés portant sur les déplacements et les boucles de répétition
 
 - Les exercices 21 à 35 portent sur les conditions
 
