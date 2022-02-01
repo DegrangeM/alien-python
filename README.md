@@ -4,11 +4,13 @@
 
 Alien-Python est à la fois une bibliothèque permettant de créer des exercices corrigés de programmation où les élèves doivent deviner la case d'arrivée d'un alien se déplaçant suivant un programme Python et à la fois une collection d'exercices basés sur cette bibliothèque. Ces exercices peuvent être utilisés pour des activités débranchées.
 
-30 exercices de bases sont fournis. Ils sont disponibles dans les dossiers `exercices/sujets` et `exercices/corrections`.
+55 exercices de bases sont fournis. Ils sont disponibles dans les dossiers `exercices/sujets` et `exercices/corrections`.
 
 - Les exercices 1 à 8 portent sur les déplacements et l'utilisation des variables
 
 - Les exercices 9 à 20 portent sur les boucles de répétition.
+
+- Les exercices A à H sont des exercices inversés portent sur les déplacements et les boucles de répétition
 
 - Les exercices 21 à 35 portent sur les conditions
 
@@ -30,11 +32,21 @@ La bibliothèque permet de générer automatiquement une correction de l'exercic
 
 <img src="https://user-images.githubusercontent.com/53106394/132256753-5725039b-a575-4d73-939d-996f8784726f.png" width="400" />
 
+Dans le cadre des exercices inversés, le déplacement de l'alien est donné et les élèves doivent compléter ou construire le programme python ayant permis ce déplacement.
+
 ## Organisation des fichiers
 
-- À la racine se trouve un fichier `alien.pdf` à distribuer aux élèves. Ce fichier contient la grille de déplacement de l'alien ainsi que 20 cases réponses.
+- À la racine se trouve plusieurs fichiers utiles :
+ 
+  - Le fichier `alien.pdf` est à distribuer aux élèves. Il contient la grille de déplacement de l'alien ainsi que 20 cases réponses pour les exercices 1 à 20.
+  
+  - Le fichier `alien2.pdf` contient la grille de déplacement de l'alien ainsi que 15 cases réponses pour les exercices 21 à 35.
 
-- Le dossier `exercices` contient les 20 exercices de bases
+  - Le fichier `alien3.pdf` contient la grille de déplacement de l'alien ainsi que 12 cases réponses pour les exercices 36 à 47.
+
+  - Le fichier `alienA.pdf` contient les exercices inversés A à H.
+
+- Le dossier `exercices` contient les 55 exercices de bases
 
   - Le dossier `sujets` contient les programmes au format image
 
