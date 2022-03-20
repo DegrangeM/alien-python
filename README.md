@@ -16,7 +16,9 @@ Alien-Python est à la fois une bibliothèque permettant de créer des exercices
 
 - Les exercices 36 à 47 portent sur les boucles while
 
-- A venir : des exercices sur les boucles de répétition généralisée (utilisation de la variable compteur)
+- Les exercices 48 à 62 portent sur les fonctions (sans valeur de retour) et les boucles for (avec utilisation de la variable compteur)
+
+- A venir : des exercices sur la notion de fonction avec utilisation de la variable retour et avec plusieurs paramètres
 
 La grille ci-dessous est données aux élèves :
 
@@ -43,6 +45,8 @@ Dans le cadre des exercices inversés, le déplacement de l'alien est donné et 
   - Le fichier `alien2.pdf` contient la grille de déplacement de l'alien ainsi que 15 cases réponses pour les exercices 21 à 35.
 
   - Le fichier `alien3.pdf` contient la grille de déplacement de l'alien ainsi que 12 cases réponses pour les exercices 36 à 47.
+  
+  - Le fichier `alien4.pdf` contient la grille de déplacement de l'alien ainsi que 12 cases réponses pour les exercices 48  à 62.
 
   - Le fichier `alienA.pdf` contient les exercices inversés A à H.
 
