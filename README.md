@@ -74,7 +74,7 @@ Dans le cadre des exercices inversés, le déplacement de l'alien est donné et 
 
 ## Création d'exercices
 
-Pour créer un exercice, il suffit de s'insiperer d'un des exercices de base fournis.
+Pour créer un exercice, il suffit de s'inspirer d'un des exercices de base fournis.
 
 Exécuter le fichier permettra de générer la grille de correction.
 
