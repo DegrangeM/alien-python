@@ -101,3 +101,7 @@ Exécuter le programme dans le dossier tool permettra de générer le programme 
 Alien-Python est sous license MIT.
 
 Les images d'aliens ont été réalisées par [Kenney](https://www.kenney.nl/assets/platformer-pack-redux) et sont sous license C0.
+
+## Article MathemaTICE
+
+J'ai rédigé [un article](http://revue.sesamath.net/spip.php?article1510) dans la revue MathemaTICE de sesamath qui présente une analyse détaillée et apporte de nombreuses informations supplémentaires sur mon projet Alien-Python. N'hésitez pas à le consulter si vous souhaitez plus d'informations.
