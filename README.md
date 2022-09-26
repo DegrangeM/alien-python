@@ -1,6 +1,6 @@
 <a href="https://github.com/DegrangeM/alien-python/archive/refs/heads/master.zip"><img src="https://shields.io/badge/%20%20T%C3%A9l%C3%A9charger-.zip-green?logo=gitlfs&&logoColor=white&style=flat"></a>
 
-*Pour plus d'information vous pouvez consulter l'article [Introduction à la programmation Python de manière débranchée avec Alien-Python](http://revue.sesamath.net/spip.php?article1510) publiée dans la revue MathémaTICE.*
+*Pour une analyse pédagogique et plus d'informations vous pouvez consulter l'article [Introduction à la programmation Python de manière débranchée avec Alien-Python](http://revue.sesamath.net/spip.php?article1510) publiée dans la revue MathémaTICE.*
 
 # Alien-Python
 
