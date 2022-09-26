@@ -10,9 +10,11 @@ Alien-Python est à la fois une bibliothèque permettant de créer des exercices
 
 - Les exercices 9 à 20 portent sur les boucles de répétition.
 
-- Les exercices A à H sont des exercices inversés portant sur les déplacements et les boucles de répétition
+- Les exercices A1 à A8 sont des exercices inversés portant sur les déplacements et les boucles de répétition
 
 - Les exercices 21 à 35 portent sur les conditions
+
+- Les exercices B1 à B8 sont des exercices inversés portant sur les conditions
 
 - Les exercices 36 à 47 portent sur les boucles while
 
@@ -48,7 +50,9 @@ Dans le cadre des exercices inversés, le déplacement de l'alien est donné et 
   
   - Le fichier `alien4.pdf` contient la grille de déplacement de l'alien ainsi que 12 cases réponses pour les exercices 48  à 62.
 
-  - Le fichier `alienA.pdf` contient les exercices inversés A à H.
+  - Le fichier `alienA.pdf` contient les exercices inversés A1 à A8.
+  
+  - Le fichier `alienB.pdf` contient les exercices inversés B1 à B8.
 
 - Le dossier `exercices` contient les 55 exercices de bases
 
