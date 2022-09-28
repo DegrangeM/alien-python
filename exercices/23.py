@@ -6,7 +6,7 @@ c = a * b
 d = a + b
 
 gauche(6)
-if a > d :
+if c > d :
     haut(3)
 else :
     bas(3)
