@@ -16,5 +16,5 @@ if a > b :
     droite()
     for loop in range(4) :
         bas()
-    haut(3)
+    gauche(3)
 ss()
