@@ -66,6 +66,12 @@ Dans le cadre des exercices inversés, le déplacement de l'alien est donné et 
     
     - Le fichier `0.png` contient la grille de base avec l'alien 
 
+  - Le dossier `scratch` contient les fichiers servant à générer un équivalant scratch aux codes pythons
+    
+    - Le dossier `pdf` contient les équivalants pseudo-scratch sous forme de block des codes pythons
+    
+    - Le dossier `tex` contient les fichiers latex permettant de générer ces pdf
+
   - Le dossier `libs` contient la librairie de base permettant de générer les corrections
 
   - Le dossier `tools` contient des fichier utiles à exécuter
@@ -75,6 +81,8 @@ Dans le cadre des exercices inversés, le déplacement de l'alien est donné et 
     - Le fichier `generer_moodle.py` permet de générer un fichier `moodle.xml` à importer dans un quizz moodle
     
     - Le fichier `generer_pronote.py` permet de générer un fichier `pronote.xml` à importer dans les quizz pronote
+    
+    - Le fichier `generer_scratch.py` permet de générer les fichiers servant à afficher l'équivalant scratch aux programmes python
 
     *Note : Il faut d'abord générer les sujets et les corrigés avant de générer les fichiers moodle et pronote. Les fichiers liés aux exercices fournis de base sont déjà générés.*
 
