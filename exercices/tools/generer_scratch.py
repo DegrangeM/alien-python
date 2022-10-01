@@ -5,13 +5,6 @@ import re
 
 # La génération ne fonctionnera pas avec tous les programmes pythons possibles
 
-# IL VA Y AVOIR UN SOUCIS EN CAS DE MULTIPLE FERMETURE DE BLOCK
-# Ex :
-# if XXX :
-# 	if XXX :
-# XXX
-# au les deux ifs ont été fermés
-
 for f in os.listdir("../"):
     if os.path.isfile("../" + f):
         with open('../' + f, 'r') as c :
@@ -32,8 +25,9 @@ for f in os.listdir("../"):
                 
                 code = code[1:-1] # on retire la première (import) et dernière (ss) ligne
                 
-                indent = 0
-                lastIndent = indent
+                code.append('#FIN') # On ajoute une ligne pour pouvoir clear la fermeture des blocks
+                
+                indents = [0]
                 blocks = []
                 
                 for line in code :
@@ -43,11 +37,13 @@ for f in os.listdir("../"):
                     if line == '' :
                         continue
                     if line[0] == '#' :
-                            
-                        continue
+                        if line != '#FIN' :
+                            continue
                     indent = length - len(line)
+                    if indents[-1] < indent :
+                        indents.append(indent)
                     # On suppose que le code est indenté de manière valide
-                    if lastIndent > indent : # L'indentation s'est réduite (décallage vers la gauche)
+                    while indents[-1] > indent : # L'indentation s'est réduite (décallage vers la gauche)
                         if blocks[-1] == 'def' :
                             latex.append('\\blockspace')
                         else :
@@ -55,18 +51,31 @@ for f in os.listdir("../"):
                             if blocks[-1] == 'if' :
                                 latex.append('{}') # On ajoute un else vide, on l'enlèvera si besoin
                         blocks.pop(-1) # On retire le dernier block de la liste puisqu'on vient d'en sortir
-                    lastIndent = indent
+                        indents.pop(-1)
                     
                     if line == '' :
                         continue
                                     
                     # Déplacements
-                    if m := re.match(r'(gauche|droite|haut|bas)\(\s?([0-9]*)\s?\)', line) :
+                    if m := re.match(r'(gauche|droite|haut|bas)\(\s?([0-9a-zA-Z_]*)\s?\)', line) :
                         prefix = 'à' if m.group(1) in ['gauche', 'droite'] else 'en'
                         if m.group(2) == '' :
                             latex.append('\\blockmove{Se déplacer \\selectmenu{'+prefix+' '+m.group(1)+'}}')
                         else :
-                            latex.append('\\blockmove{Se déplacer \\selectmenu{'+prefix+' '+m.group(1)+'} de \\ovalnum{'+m.group(2)+'} '+('cases' if int(m.group(2)) >= 2 else 'case') + '}')
+                            valeur = m.group(2)
+                            valeur = valeur.strip()
+                            pas_de_s = False
+                            if re.match(r'^[0-9]+$', valeur) :
+                                if int(valeur) < 2 :
+                                    pas_de_s = True
+                                valeur = '\\ovalnum{'+valeur+'}'
+                            else :
+                                valeur = re.sub(r'([a-zA-Z_]+)([^(a-zA-Z_]|$)', r'\\ovalvariable{\1}\2', valeur)
+                                valeur = valeur.replace('colonne()', '\\ovalsensing{colonne actuelle}')
+                                valeur = re.sub(r'([0-9]+)', r'\\ovalnum{\1}', valeur)
+                                if re.match(r'^[a-zA-Z_]+$', valeur) :
+                                    valeur = '\\ovaloperator{'+valeur+'}'
+                            latex.append('\\blockmove{Se déplacer \\selectmenu{'+prefix+' '+m.group(1)+'} de '+valeur+' '+('case' if pas_de_s else 'cases') + '}')
                         continue
                     
                     # Affectation
@@ -139,13 +148,17 @@ for f in os.listdir("../"):
                         latex.append('\\initmoreblocks{définir \\namemoreblocks{'+m.group(1)+'}}')
                         continue
                         
+                    # Other function ?
+                    if m := re.match(r'([a-zA-Z_]+)\((.*)\)\s*$', line) :
+                        # Il faudrait gérer les variables, pour l'instant l'affichage est brut ...                        
+                        latex.append('\\blockmoreblocks{'+m.group(1)+'('+m.group(2)+')}')
+                        continue
+                        
+                    if line == '#FIN' :
+                        continue
+                        
                     # Impossible de convertir la ligne ...
                     latex.append('\\blockpen{'+line+'}')
-                
-                if len(blocks) : # Il faut fermer les blocks ouvert qui n'auraient jamais été fermé par absance de nouvelle ligne
-                    parenthese_a_fermer = len(blocks) - blocks.count('def')
-                    if parenthese_a_fermer > 0 :
-                        latex.append('}'*parenthese_a_fermer)
                 
                 latex.extend([
                     '\\end{scratch}',
