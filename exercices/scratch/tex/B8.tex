@@ -1,0 +1,24 @@
+\documentclass{standalone}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern}
+\usepackage{babel}
+\usepackage{scratch3}
+\begin{document}
+\begin{scratch}
+\blockvariable{mettre \ovalvariable{a} à \ovalnum{1}}
+\blockmove{Se déplacer \selectmenu{en haut} de \ovalnum{7} cases}
+\blockmove{Se déplacer \selectmenu{à droite} de \ovalnum{7} cases}
+\blockmove{Se déplacer \selectmenu{en bas} de \ovalnum{2} cases}
+\blockrepeat{Répéter \ovalnum{6} fois}{
+\blockmove{Se déplacer \selectmenu{à gauche} de \ovalnum{2} cases}
+\blockifelse{Si \booloperator{\ovalvariable{a} < \ovalnum{5}} alors}{
+\blockmove{Se déplacer \selectmenu{en bas} de \ovalnum{2} cases}
+}
+{}
+\blockvariable{mettre \ovalvariable{a} à \ovaloperator{\ovalvariable{a} + \ovalnum{1}}}
+}
+\blockmove{Se déplacer \selectmenu{en haut} de \ovalnum{5} cases}
+\blockmoreblocks{ss()}
+\end{scratch}
+\end{document}

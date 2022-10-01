@@ -1,0 +1,30 @@
+\documentclass{standalone}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern}
+\usepackage{babel}
+\usepackage{scratch3}
+\begin{document}
+\begin{scratch}
+\blockmove{Se déplacer \selectmenu{à droite}}
+\blockmove{Se déplacer \selectmenu{en haut}}
+\blockrepeat{Répéter \ovalnum{2} fois}{
+\blockmove{Se déplacer \selectmenu{à gauche}}
+}
+\blockrepeat{Répéter \ovalnum{2} fois}{
+\blockmove{Se déplacer \selectmenu{en bas}}
+}
+\blockrepeat{Répéter \ovalnum{3} fois}{
+\blockmove{Se déplacer \selectmenu{à droite}}
+}
+\blockrepeat{Répéter \ovalnum{3} fois}{
+\blockmove{Se déplacer \selectmenu{en haut}}
+}
+\blockrepeat{Répéter \ovalnum{4} fois}{
+\blockmove{Se déplacer \selectmenu{à gauche}}
+}
+\blockrepeat{Répéter \ovalnum{4} fois}{
+\blockmove{Se déplacer \selectmenu{en bas}}
+}
+\end{scratch}
+\end{document}

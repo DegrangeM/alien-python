@@ -1,0 +1,21 @@
+\documentclass{standalone}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern}
+\usepackage{babel}
+\usepackage{scratch3}
+\begin{document}
+\begin{scratch}
+\blockvariable{mettre \ovalvariable{a} à \ovalnum{2}}
+\blockvariable{mettre \ovalvariable{b} à \ovalnum{5}}
+\blockmove{Se déplacer \selectmenu{à gauche} de \ovalvariable{a} cases}
+\blockifelse{Si \booloperator{\ovalvariable{a} < \ovalvariable{b}} alors}{
+\blockmove{Se déplacer \selectmenu{en bas} de \ovalvariable{b} cases}
+}
+{
+\blockmove{Se déplacer \selectmenu{en haut} de \ovalvariable{b} cases}
+}
+\blockmove{Se déplacer \selectmenu{à droite} de \ovalvariable{a} cases}
+\blockmoreblocks{ss()}
+\end{scratch}
+\end{document}

@@ -1,0 +1,23 @@
+\documentclass{standalone}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern}
+\usepackage{babel}
+\usepackage{scratch3}
+\begin{document}
+\begin{scratch}
+\blockvariable{mettre \ovalvariable{a} à \ovalnum{1}}
+\blockmove{Se déplacer \selectmenu{à gauche} de \ovalnum{7} cases}
+\blockrepeat{Tant que \booloperator{\ovalvariable{a} < \ovalnum{80}} faire}{
+\blockifelse{Si \booloperator{\ovalvariable{a} < \ovalnum{50}} alors}{
+\blockvariable{mettre \ovalvariable{a} à \ovaloperator{\ovalvariable{a} * \ovalnum{2}}}
+\blockmove{Se déplacer \selectmenu{en haut}}
+}
+{
+\blockvariable{mettre \ovalvariable{a} à \ovaloperator{\ovalvariable{a} + \ovalnum{5}}}
+\blockmove{Se déplacer \selectmenu{en bas} de \ovalnum{2} cases}
+}
+\blockmove{Se déplacer \selectmenu{à droite}}
+}
+\end{scratch}
+\end{document}

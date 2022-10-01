@@ -1,0 +1,19 @@
+\documentclass{standalone}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern}
+\usepackage{babel}
+\usepackage{scratch3}
+\begin{document}
+\begin{scratch}
+\blockvariable{mettre \ovalvariable{a} à \ovalnum{0}}
+\blockmove{Se déplacer \selectmenu{à gauche} de \ovalnum{7} cases}
+\blockmove{Se déplacer \selectmenu{en bas} de \ovalnum{7} cases}
+\blockrepeat{Répéter \ovalnum{4} fois}{
+\blockvariable{mettre \ovalvariable{a} à \ovaloperator{\ovalvariable{a} + \ovalnum{1}}}
+\blockmove{Se déplacer \selectmenu{à droite} de \ovalvariable{a} cases}
+\blockmove{Se déplacer \selectmenu{en haut} de \ovalvariable{a} cases}
+}
+\blockmove{Se déplacer \selectmenu{à gauche} de \ovalnum{2} cases}
+\end{scratch}
+\end{document}

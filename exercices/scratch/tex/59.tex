@@ -1,0 +1,20 @@
+\documentclass{standalone}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern}
+\usepackage{babel}
+\usepackage{scratch3}
+\begin{document}
+\begin{scratch}
+\blockmove{Se déplacer \selectmenu{à gauche} de \ovalnum{5} cases}
+\blockmove{Se déplacer \selectmenu{en haut} de \ovalnum{7} cases}
+\blockmove{Se déplacer \selectmenu{à droite} de \ovalnum{2} cases}
+\blockrepeat{Répéter pour \ovalvariable{n} allant de \ovalnum{2} (inclus) à \ovalnum{5} (exclus)}{
+\blockmove{Se déplacer \selectmenu{en bas} de \ovalvariable{n} cases}
+\blockmove{Se déplacer \selectmenu{à droite}}
+\blockmove{Se déplacer \selectmenu{en haut} de \ovalnum{2} cases}
+\blockmove{Se déplacer \selectmenu{à droite}}
+}
+\blockmove{Se déplacer \selectmenu{en bas} de \ovalnum{5} cases}
+\end{scratch}
+\end{document}

@@ -1,0 +1,33 @@
+\documentclass{standalone}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern}
+\usepackage{babel}
+\usepackage{scratch3}
+\begin{document}
+\begin{scratch}
+\blockmove{Se déplacer \selectmenu{à gauche} de \ovalnum{6} cases}
+\blockmove{Se déplacer \selectmenu{en haut} de \ovalnum{5} cases}
+\blockifelse{Si \booloperator{\ovalsensing{colonne actuelle} < \ovalnum{3}} alors}{
+\blockmove{Se déplacer \selectmenu{à droite} de \ovalnum{4} cases}
+}
+{}
+\blockifelse{Si \booloperator{\ovalsensing{colonne actuelle} < \ovalnum{5}} alors}{
+\blockmove{Se déplacer \selectmenu{à droite} de \ovalnum{2} cases}
+}
+{}
+\blockifelse{Si \booloperator{\ovalsensing{colonne actuelle} > \ovalnum{9}} alors}{
+\blockmove{Se déplacer \selectmenu{en bas} de \ovalnum{4} cases}
+}
+{}
+\blockmove{Se déplacer \selectmenu{à droite} de \ovalnum{4} cases}
+\blockifelse{Si \booloperator{\ovalsensing{colonne actuelle} > \ovalnum{9}} alors}{
+\blockmove{Se déplacer \selectmenu{en bas} de \ovalnum{4} cases}
+}
+{}
+\blockrepeat{Répéter \ovalnum{3} fois}{
+\blockmove{Se déplacer \selectmenu{à gauche}}
+\blockmove{Se déplacer \selectmenu{en haut}}
+}
+\end{scratch}
+\end{document}

@@ -1,0 +1,27 @@
+\documentclass{standalone}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern}
+\usepackage{babel}
+\usepackage{scratch3}
+\begin{document}
+\begin{scratch}
+\initmoreblocks{définir \namemoreblocks{L()}}
+\blockmove{Se déplacer \selectmenu{en bas} de \ovalnum{2} cases}
+\blockmove{Se déplacer \selectmenu{à droite}}
+\blockspace
+\initmoreblocks{définir \namemoreblocks{C()}}
+\blockmove{Se déplacer \selectmenu{à gauche}}
+\blockmove{Se déplacer \selectmenu{en bas} de \ovalnum{2} cases}
+\blockmove{Se déplacer \selectmenu{à droite}}
+\blockspace
+\blockmoreblocks{L()}
+\blockmove{Se déplacer \selectmenu{en bas} de \ovalnum{3} cases}
+\blockmoreblocks{C()}
+\blockmove{Se déplacer \selectmenu{à droite} de \ovalnum{4} cases}
+\blockmove{Se déplacer \selectmenu{en haut} de \ovalnum{14} cases}
+\blockmove{Se déplacer \selectmenu{à gauche} de \ovalnum{3} cases}
+\blockmoreblocks{C()}
+\blockmoreblocks{L()}
+\end{scratch}
+\end{document}

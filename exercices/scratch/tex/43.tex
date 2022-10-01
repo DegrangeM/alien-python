@@ -1,0 +1,24 @@
+\documentclass{standalone}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern}
+\usepackage{babel}
+\usepackage{scratch3}
+\begin{document}
+\begin{scratch}
+\blockvariable{mettre \ovalvariable{n} à \ovalnum{0}}
+\blockvariable{mettre \ovalvariable{u} à \ovalnum{5}}
+\blockrepeat{Tant que \booloperator{\ovalvariable{u} < \ovalnum{200}} faire}{
+\blockmove{Se déplacer \selectmenu{à droite}}
+\blockvariable{mettre \ovalvariable{n} à \ovaloperator{\ovalvariable{n} + \ovalnum{1}}}
+\blockvariable{mettre \ovalvariable{u} à \ovaloperator{\ovalnum{3} * \ovalvariable{u}}}
+}
+\blockmove{Se déplacer \selectmenu{en haut} de \ovalvariable{n} cases}
+\blockifelse{Si \booloperator{\ovalvariable{u} > \ovalnum{400}} alors}{
+\blockmove{Se déplacer \selectmenu{à gauche}}
+}
+{
+\blockmove{Se déplacer \selectmenu{à droite}}
+}
+\end{scratch}
+\end{document}

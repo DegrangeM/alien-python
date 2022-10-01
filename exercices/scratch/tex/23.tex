@@ -1,0 +1,22 @@
+\documentclass{standalone}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern}
+\usepackage{babel}
+\usepackage{scratch3}
+\begin{document}
+\begin{scratch}
+\blockvariable{mettre \ovalvariable{a} à \ovalnum{3}}
+\blockvariable{mettre \ovalvariable{b} à \ovalnum{2}}
+\blockvariable{mettre \ovalvariable{c} à \ovaloperator{\ovalvariable{a} * \ovalvariable{b}}}
+\blockvariable{mettre \ovalvariable{d} à \ovaloperator{\ovalvariable{a} + \ovalvariable{b}}}
+\blockmove{Se déplacer \selectmenu{à gauche} de \ovalnum{6} cases}
+\blockifelse{Si \booloperator{\ovalvariable{c} > \ovalvariable{d}} alors}{
+\blockmove{Se déplacer \selectmenu{en haut} de \ovalnum{3} cases}
+}
+{
+\blockmove{Se déplacer \selectmenu{en bas} de \ovalnum{3} cases}
+}
+\blockmove{Se déplacer \selectmenu{à droite} de \ovalnum{5} cases}
+\end{scratch}
+\end{document}

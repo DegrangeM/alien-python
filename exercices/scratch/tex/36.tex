@@ -1,0 +1,15 @@
+\documentclass{standalone}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern}
+\usepackage{babel}
+\usepackage{scratch3}
+\begin{document}
+\begin{scratch}
+\blockmove{Se déplacer \selectmenu{en haut}}
+\blockrepeat{Tant que \booloperator{\ovalsensing{colonne actuelle} < \ovalnum{13}} faire}{
+\blockmove{Se déplacer \selectmenu{à droite}}
+}
+\blockmove{Se déplacer \selectmenu{en bas}}
+\end{scratch}
+\end{document}

@@ -1,0 +1,27 @@
+\documentclass{standalone}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern}
+\usepackage{babel}
+\usepackage{scratch3}
+\begin{document}
+\begin{scratch}
+\initmoreblocks{définir \namemoreblocks{deplacement(n)}}
+\blockifelse{Si \booloperator{\ovalvariable{n} > \ovalnum{3}} alors}{
+\blockmove{Se déplacer \selectmenu{à gauche} de \ovalvariable{n} cases}
+}
+{
+\blockmove{Se déplacer \selectmenu{à droite} de \ovalvariable{n} cases}
+}
+\blockspace
+\blockmove{Se déplacer \selectmenu{en bas} de \ovalnum{2} cases}
+\blockmoreblocks{deplacement(2)}
+\blockmoreblocks{deplacement(2)}
+\blockmove{Se déplacer \selectmenu{en haut} de \ovalnum{4} cases}
+\blockmoreblocks{deplacement(4)}
+\blockmoreblocks{deplacement(4)}
+\blockmove{Se déplacer \selectmenu{en bas} de \ovalnum{5} cases}
+\blockmoreblocks{deplacement(3)}
+\blockmoreblocks{deplacement(1)}
+\end{scratch}
+\end{document}

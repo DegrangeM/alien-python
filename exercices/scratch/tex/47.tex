@@ -1,0 +1,26 @@
+\documentclass{standalone}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern}
+\usepackage{babel}
+\usepackage{scratch3}
+\begin{document}
+\begin{scratch}
+\blockvariable{mettre \ovalvariable{x} à \ovalnum{8}}
+\blockvariable{mettre \ovalvariable{y} à \ovalnum{8}}
+\blockvariable{mettre \ovalvariable{y} à \ovaloperator{\ovalvariable{y} + \ovalnum{6}}}
+\blockmove{Se déplacer \selectmenu{en bas} de \ovalnum{6} cases}
+\blockvariable{mettre \ovalvariable{x} à \ovaloperator{\ovalvariable{x} - \ovalnum{7}}}
+\blockmove{Se déplacer \selectmenu{à gauche} de \ovalnum{7} cases}
+\blockrepeat{Tant que \booloperator{\ovalvariable{x} < \ovalnum{12}} faire}{
+\blockrepeat{Tant que \booloperator{\ovalvariable{y} < \ovalnum{11}} faire}{
+\blockvariable{mettre \ovalvariable{x} à \ovaloperator{\ovalvariable{x} + \ovalnum{1}}}
+\blockmove{Se déplacer \selectmenu{à droite}}
+\blockvariable{mettre \ovalvariable{y} à \ovaloperator{\ovalvariable{y} + \ovalnum{3}}}
+\blockmove{Se déplacer \selectmenu{en bas} de \ovalnum{3} cases}
+}
+\blockvariable{mettre \ovalvariable{y} à \ovaloperator{\ovalvariable{y} - \ovalnum{10}}}
+\blockmove{Se déplacer \selectmenu{en haut} de \ovalnum{10} cases}
+}
+\end{scratch}
+\end{document}

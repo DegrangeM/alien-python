@@ -1,0 +1,22 @@
+\documentclass{standalone}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern}
+\usepackage{babel}
+\usepackage{scratch3}
+\begin{document}
+\begin{scratch}
+\initmoreblocks{définir \namemoreblocks{escargot(n)}}
+\blockmove{Se déplacer \selectmenu{en bas} de \ovalvariable{n} cases}
+\blockmove{Se déplacer \selectmenu{à droite} de \ovalvariable{n} cases}
+\blockmove{Se déplacer \selectmenu{en haut} de \ovalvariable{n} cases}
+\blockmove{Se déplacer \selectmenu{en haut}}
+\blockmove{Se déplacer \selectmenu{à gauche} de \ovalvariable{n} cases}
+\blockmove{Se déplacer \selectmenu{à gauche}}
+\blockspace
+\blockmoreblocks{escargot(1)}
+\blockmoreblocks{escargot(3)}
+\blockmoreblocks{escargot(5)}
+\blockmoreblocks{escargot(7)}
+\end{scratch}
+\end{document}

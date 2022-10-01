@@ -1,0 +1,17 @@
+\documentclass{standalone}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern}
+\usepackage{babel}
+\usepackage{scratch3}
+\begin{document}
+\begin{scratch}
+\blockvariable{mettre \ovalvariable{a} à \ovalnum{3}}
+\blockvariable{mettre \ovalvariable{b} à \ovaloperator{\ovalvariable{a} - \ovalnum{1}}}
+\blockvariable{mettre \ovalvariable{c} à \ovaloperator{\ovalvariable{a} * \ovalvariable{b}}}
+\blockmove{Se déplacer \selectmenu{à gauche} de \ovalvariable{a} cases}
+\blockmove{Se déplacer \selectmenu{en bas} de \ovalvariable{b} cases}
+\blockmove{Se déplacer \selectmenu{à gauche} de \ovalvariable{b} cases}
+\blockmove{Se déplacer \selectmenu{en haut} de \ovalvariable{c} cases}
+\end{scratch}
+\end{document}

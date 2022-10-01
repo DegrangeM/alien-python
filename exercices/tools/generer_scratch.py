@@ -1,6 +1,8 @@
 import os
 import re
 
+GENERER_PDF = True # True = .tex et .pdf / False = .tex uniquement
+
 # IMPORTANT : NECESSITE PYTHON >= 3.8
 
 # La génération ne fonctionnera pas avec tous les programmes pythons possibles
@@ -8,7 +10,7 @@ import re
 for f in os.listdir("../"):
     if os.path.isfile("../" + f):
         with open('../' + f, 'r') as c :
-            with open('../scratch/'+f.split('.')[0]+'.tex', 'w',  encoding="utf-8") as i:
+            with open('../scratch/tex/'+f.split('.')[0]+'.tex', 'w',  encoding="utf-8") as i:
 
                 latex = [
                     '\\documentclass{standalone}',
@@ -166,4 +168,7 @@ for f in os.listdir("../"):
                 ])
               
                 i.write('\n'.join(latex))
+                i.close() # obligatoire sinon latex ne peut pas accéder au fichier
+                if GENERER_PDF :
+                    os.system(' pdflatex.exe -synctex=0 -interaction=nonstopmode -quiet -output-directory="../scratch/pdf/" -aux-directory="../scratch/tex/temp/" "../scratch/tex/'+f[:-3]+'.tex"')
                 print("Génération de " + f + " terminée")

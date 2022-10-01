@@ -1,0 +1,23 @@
+\documentclass{standalone}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern}
+\usepackage{babel}
+\usepackage{scratch3}
+\begin{document}
+\begin{scratch}
+\initmoreblocks{définir \namemoreblocks{carre(n)}}
+\blockvariable{mettre \ovalvariable{a} à \ovaloperator{\ovalvariable{n} * \ovalvariable{n}}}
+\blockmove{Se déplacer \selectmenu{en haut} de \ovalvariable{a} cases}
+\blockspace
+\blockmoreblocks{carre(2)}
+\blockmove{Se déplacer \selectmenu{à gauche} de \ovalnum{2} cases}
+\blockmove{Se déplacer \selectmenu{en bas} de \ovalnum{8} cases}
+\blockmove{Se déplacer \selectmenu{à gauche} de \ovalnum{2} cases}
+\blockmoreblocks{carre(3)}
+\blockmove{Se déplacer \selectmenu{à droite} de \ovalnum{5} cases}
+\blockmove{Se déplacer \selectmenu{en bas} de \ovalnum{12} cases}
+\blockmove{Se déplacer \selectmenu{à droite} de \ovalnum{2} cases}
+\blockmoreblocks{carre(2)}
+\end{scratch}
+\end{document}

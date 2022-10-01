@@ -1,0 +1,25 @@
+\documentclass{standalone}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern}
+\usepackage{babel}
+\usepackage{scratch3}
+\begin{document}
+\begin{scratch}
+\blockvariable{mettre \ovalvariable{a} à \ovalnum{2}}
+\blockvariable{mettre \ovalvariable{b} à \ovalnum{5}}
+\blockvariable{mettre \ovalvariable{c} à \ovaloperator{\ovalvariable{b} - \ovalvariable{a}}}
+\blockvariable{mettre \ovalvariable{d} à \ovalnum{1}}
+\blockmove{Se déplacer \selectmenu{à gauche}}
+\blockrepeat{Répéter \ovalvariable{c} fois}{
+\blockvariable{mettre \ovalvariable{d} à \ovaloperator{\ovalvariable{d} + \ovalnum{1}}}
+\blockmove{Se déplacer \selectmenu{en haut}}
+\blockmove{Se déplacer \selectmenu{en haut}}
+\blockmove{Se déplacer \selectmenu{à droite}}
+}
+\blockmove{Se déplacer \selectmenu{à droite}}
+\blockrepeat{Répéter \ovalvariable{d} fois}{
+\blockmove{Se déplacer \selectmenu{en bas}}
+}
+\end{scratch}
+\end{document}

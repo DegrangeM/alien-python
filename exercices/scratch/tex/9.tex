@@ -1,0 +1,17 @@
+\documentclass{standalone}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern}
+\usepackage{babel}
+\usepackage{scratch3}
+\begin{document}
+\begin{scratch}
+\blockmove{Se déplacer \selectmenu{en bas} de \ovalnum{6} cases}
+\blockmove{Se déplacer \selectmenu{à droite} de \ovalnum{6} cases}
+\blockrepeat{Répéter \ovalnum{4} fois}{
+\blockmove{Se déplacer \selectmenu{en haut} de \ovalnum{3} cases}
+\blockmove{Se déplacer \selectmenu{à gauche} de \ovalnum{2} cases}
+}
+\blockmove{Se déplacer \selectmenu{en bas} de \ovalnum{5} cases}
+\end{scratch}
+\end{document}
