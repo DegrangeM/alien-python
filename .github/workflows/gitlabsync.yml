@@ -1,0 +1,19 @@
+name: gitlabsync
+
+on:
+  - push
+  - delete
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    name: Git Repo Sync
+    steps:
+    - uses: actions/checkout@v2
+      with:
+        fetch-depth: 0
+    - uses: wangchucheng/git-repo-sync@v0.1.0
+      with:
+        target-url: https://forge.aeif.fr/DegrangeM/alien-python
+        target-username: DegrangeM
+        target-token: ${{ secrets.GITLAB_TOKEN }}
